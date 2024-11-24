@@ -12,6 +12,7 @@ import CustomFormField from "./CustomFormField";
 import SubmitButton from "./SubmitButton";
 import { UserFormValidation } from "@/lib/validation";
 import { useRouter } from "next/navigation";
+import { createUser } from "@/lib/actions/patient.actions";
 
 export enum FormFieldType {
   INPUT = "input",
@@ -46,10 +47,8 @@ const PatientForm = () => {
 
     try {
       const userData = { name, email, phone };
-
-      // const user = await createUser(userData);
-
-      // if (user) router.push(`/patients/${user.$id}/register`)
+      const user = await createUser(userData);
+      if (user) router.push(`/patients/${user.$id}/register`);
     } catch (error) {
       console.log(error);
     }
@@ -62,7 +61,7 @@ const PatientForm = () => {
         className="space-y-6 flex-1 "
       >
         <section className="mb-12 space-y-4">
-          <h1>Hi there...</h1>
+          <h1 className="text-2xl font-semibold ">Hi there...</h1>
           <p className="text-dark-700">Schedule your first appointment</p>
         </section>
 
