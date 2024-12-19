@@ -1,5 +1,9 @@
 import { z } from "zod";
 
+export const LoginFormValidation = z.object({
+  email: z.string().email("Invalid email address"),
+});
+
 export const UserFormValidation = z.object({
   name: z
     .string()

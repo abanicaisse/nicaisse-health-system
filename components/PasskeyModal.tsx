@@ -3,18 +3,18 @@
 import {
   AlertDialog,
   AlertDialogAction,
-  AlertDialogCancel,
+  // AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
+  // AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import {
   InputOTP,
   InputOTPGroup,
-  InputOTPSeparator,
+  // InputOTPSeparator,
   InputOTPSlot,
 } from "@/components/ui/input-otp";
 import { decryptKey, encryptKey } from "@/lib/utils";
@@ -22,7 +22,7 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const passkeyModal = () => {
+const PasskeyModal = () => {
   const router = useRouter();
   const path = usePathname();
   const [open, setOpen] = useState(true);
@@ -117,4 +117,4 @@ const passkeyModal = () => {
   );
 };
 
-export default passkeyModal;
+export default PasskeyModal;

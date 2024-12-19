@@ -50,7 +50,7 @@ const Success = async ({
           <p>Requested appointment details: </p>
           <div className="flex items-center gap-3">
             <Image
-              src={doctor?.image!}
+              src={doctor?.image || "/assets/icons/doctor.svg"}
               height={100}
               width={100}
               alt="doctor"
@@ -75,7 +75,7 @@ const Success = async ({
           </Link>
         </Button>
 
-        <p className="copyright pt-10 pb-12">&#169; 2024 CarePulse</p>
+        <p className="copyright pt-10 pb-12">&#169; 2024 NicaisseHealth</p>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "react-phone-number-input/style.css";
 import CustomFormField from "@/components/forms/CustomFormField";
 import { PatientFormValidation } from "@/lib/validation";
-import { createUser, registerPatient } from "@/lib/actions/patient.actions";
+import { registerPatient } from "@/lib/actions/patient.actions";
 import { FormFieldType } from "./PatientForm";
 import { SelectItem } from "../ui/select";
 import FileUploader from "../FileUploader";

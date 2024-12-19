@@ -10,7 +10,7 @@ import DatePicker from "react-datepicker";
 
 import {
   FormControl,
-  FormDescription,
+  // FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -97,7 +97,7 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
             placeholder={placeholder}
             international
             withCountryCallingCode
-            // @ts-ignore
+            // @ts-expect-error
             value={field.value as E164Number | undefined}
             onChange={field.onChange}
             className="input-phone"

@@ -1,7 +1,6 @@
 import RegisterForm from "@/components/forms/RegisterForm";
 import { getUser } from "@/lib/actions/patient.actions";
 import Image from "next/image";
-import Link from "next/link";
 
 const Register = async ({ params: { userId } }: SearchParamProps) => {
   const user = await getUser(userId);
@@ -20,7 +19,7 @@ const Register = async ({ params: { userId } }: SearchParamProps) => {
 
           <RegisterForm user={user} />
 
-          <p className="copyright pt-10 pb-12">&#169; 2024 CarePulse</p>
+          <p className="copyright pt-10 pb-12">&#169; 2024 NicaisseHealth</p>
         </div>
       </section>
 
